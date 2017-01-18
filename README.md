@@ -77,3 +77,7 @@ startActivityForResult(intent,
 }
 ```
 //here paths is the arraylist containing paths of items selected.
+
+### License
+
+This project is licensed under the Apache 2.0 License - see the [LICENSE.txt](LICENSE.txt) file for details
