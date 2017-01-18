@@ -5,7 +5,7 @@ Multiselect library is a powerful library to select multiple images and videos e
 ## Getting Started
 
 *  Add this to build.gradle
-
+```
 repositories
 { 
  jcenter() 
@@ -14,6 +14,7 @@ repositories
  url “https://jitpack.io” 
 }
 }
+```
 
 *  Add dependency for library
 
