@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.veer.multiselectsample.MainActivity"
+    >
+
+  <EditText
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:hint="Enter Number of images/videos to select, 5 by default"
+      android:inputType="number"
+      android:layout_margin="5dp"
+      android:id="@+id/edLimit"
+      />
+
+  <Button
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/edLimit"
+      android:text="Select Images"
+      android:layout_margin="5dp"
+      android:id="@+id/btImages"
+      />
+
+  <Button
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/edLimit"
+      android:text="Select Videos"
+      android:id="@+id/btVideos"
+      android:layout_margin="5dp"
+      android:layout_toRightOf="@+id/btImages"
+      />
+
+  <android.support.v7.widget.RecyclerView
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/btImages"
+      android:layout_marginTop="10dp"
+      android:id="@+id/rvItems"
+      ></android.support.v7.widget.RecyclerView>
+
+</RelativeLayout>
