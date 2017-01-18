@@ -17,23 +17,25 @@ repositories
 ```
 
 *  Add dependency for library
-
+```
 dependencies { compile 'com.github.karanvs:mediaselectsample:v1.0' }
+```
 
 ## Usage
 
 *  Define a theme in styles.xml
-
+```
 <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
   <item name="colorPrimary">@color/colorPrimary</item>
   <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
   <item name="colorAccent">@color/colorAccent</item>
 </style>
+```
 
 Use the colors of your choice, it will reflect in multiselect activity.
 
 *  Add multiselect activity under application tag and permission to your manifest
-
+```
 <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"></uses-permission>
 
 <activity
@@ -44,24 +46,28 @@ Use the colors of your choice, it will reflect in multiselect activity.
     <category android:name="android.intent.category.DEFAULT" />
   </intent-filter>
 </activity>
+```
 
 *  For selecting multiple images , use
-
+```
 Intent intent = new Intent(context, MultiSelectActivity.class);
 intent.putExtra(com.veer.multiselect.Util.Constants.LIMIT, limit);
 intent.putExtra(com.veer.multiselect.Util.Constants.SELECT_TYPE, Constants. PATH_IMAGE);
 startActivityForResult(intent,
     com.veer.multiselect.Util.Constants.REQUEST_CODE_MULTISELECT);
+    ```
 
 * For selecting multiple videos , use
+```
 Intent intent = new Intent(context, MultiSelectActivity.class);
 intent.putExtra(com.veer.multiselect.Util.Constants.LIMIT, limit);
 intent.putExtra(com.veer.multiselect.Util.Constants.SELECT_TYPE, Constants.PATH_VIDEO);
 startActivityForResult(intent,
     com.veer.multiselect.Util.Constants.REQUEST_CODE_MULTISELECT);
+    ```
 
 *  Override onActivityResult and use as
-
+```
 @Override public void onActivityResult(int requestCode, int resultCode, Intent data) {
   super.onActivityResult(requestCode, resultCode, data);
   if (requestCode == com.veer.multiselect.Util.Constants.REQUEST_CODE_MULTISELECT
@@ -69,4 +75,5 @@ startActivityForResult(intent,
     paths = data.getStringArrayListExtra(com.veer.multiselect.Util.Constants.GET_PATHS);
       }
 }
+```
 //here paths is the arraylist containing paths of items selected.
