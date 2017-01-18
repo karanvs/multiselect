@@ -31,7 +31,7 @@ dependencies { compile 'com.github.karanvs:mediaselectsample:v1.0' }
 
 Use the colors of your choice, it will reflect in multiselect activity.
 
-4)  Add multiselect activity under application tag and permission to your manifest
+*  Add multiselect activity under application tag and permission to your manifest
 
 <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"></uses-permission>
 
@@ -44,7 +44,7 @@ Use the colors of your choice, it will reflect in multiselect activity.
   </intent-filter>
 </activity>
 
-5)  For selecting multiple images , use
+*  For selecting multiple images , use
 
 Intent intent = new Intent(context, MultiSelectActivity.class);
 intent.putExtra(com.veer.multiselect.Util.Constants.LIMIT, limit);
@@ -52,14 +52,14 @@ intent.putExtra(com.veer.multiselect.Util.Constants.SELECT_TYPE, Constants. PATH
 startActivityForResult(intent,
     com.veer.multiselect.Util.Constants.REQUEST_CODE_MULTISELECT);
 
-6) For selecting multiple videos , use
+* For selecting multiple videos , use
 Intent intent = new Intent(context, MultiSelectActivity.class);
 intent.putExtra(com.veer.multiselect.Util.Constants.LIMIT, limit);
 intent.putExtra(com.veer.multiselect.Util.Constants.SELECT_TYPE, Constants.PATH_VIDEO);
 startActivityForResult(intent,
     com.veer.multiselect.Util.Constants.REQUEST_CODE_MULTISELECT);
 
-7)  Override onActivityResult and use as
+*  Override onActivityResult and use as
 
 @Override public void onActivityResult(int requestCode, int resultCode, Intent data) {
   super.onActivityResult(requestCode, resultCode, data);
@@ -68,4 +68,4 @@ startActivityForResult(intent,
     paths = data.getStringArrayListExtra(com.veer.multiselect.Util.Constants.GET_PATHS);
       }
 }
-//here path contains a list of 
+//here paths is the arraylist containing paths of items selected.
