@@ -18,7 +18,7 @@ repositories
 
 *  Add dependency for library
 ```
-dependencies { compile 'com.github.karanvs:mediaselectsample:v1.0' }
+dependencies { compile 'com.github.karanvs:multiselect:v1.0' }
 ```
 
 ## Usage
