@@ -4,7 +4,7 @@ Multiselect library is a powerful library to select multiple images and videos e
 
 ## Getting Started
 
-1)  Add this to build.gradle
+*  Add this to build.gradle
 
 repositories
 { 
@@ -15,13 +15,13 @@ repositories
 }
 }
 
-2)  Add dependency for library
+*  Add dependency for library
 
 dependencies { compile 'com.github.karanvs:mediaselectsample:v1.0' }
 
 ## Usage
 
-3)  Define a theme in styles.xml
+*  Define a theme in styles.xml
 
 <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">
   <item name="colorPrimary">@color/colorPrimary</item>
