@@ -18,7 +18,7 @@ repositories
 
 *  Add dependency for library
 ```
-dependencies { compile 'com.github.karanvs:multiselect:v1.1' }
+dependencies { compile 'com.github.karanvs:multiselect:v1.2' }
 ```
 
 ## Usage
