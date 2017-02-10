@@ -71,9 +71,26 @@ public class LoadBitmap {
       path = params[0];
       Bitmap bitmap = null;
       if (MultiSelectActivity.pathType == Constants.PATH_IMAGE) {
-        BitmapFactory.Options options = new BitmapFactory.Options();
-        options.inSampleSize = 3;
-        bitmap = BitmapFactory.decodeFile(path, options);
+        try {
+          BitmapFactory.Options options = new BitmapFactory.Options();
+          options.inSampleSize = 3;
+          options.inJustDecodeBounds = false;
+          options.inPreferredConfig = Bitmap.Config.RGB_565;
+          bitmap = BitmapFactory.decodeFile(path, options);
+        }
+        catch (OutOfMemoryError e)
+        {
+          if (bitmap != null) {
+            bitmap.recycle();
+            bitmap = null;
+            System.gc();
+          }
+          BitmapFactory.Options options = new BitmapFactory.Options();
+          options.inSampleSize = 3;
+          options.inJustDecodeBounds = false;
+          options.inPreferredConfig = Bitmap.Config.RGB_565;
+          bitmap = BitmapFactory.decodeFile(path, options);
+        }
       } else {
         bitmap =
             ThumbnailUtils.createVideoThumbnail(path, MediaStore.Video.Thumbnails.FULL_SCREEN_KIND);
